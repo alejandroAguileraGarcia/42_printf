@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putui_i.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 16:04:09 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/04/26 20:06:17 by aaguiler         ###   ########.fr       */
+/*   Created: 2022/04/27 14:25:49 by aaguiler          #+#    #+#             */
+/*   Updated: 2022/04/27 15:46:52 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_printf.h"
 
-void	ft_putchar(char c, int *i)
+void	ft_putui_i(unsigned int nb, int *i)
 {
-	write(1, &c, 1);
-	*i += 1;
+	if (nb >= 10)
+	{
+		ft_putui_i(nb / 10, i);
+		nb %= 10;
+	}
+	ft_putchar_i(nb + '0', i);
 }
