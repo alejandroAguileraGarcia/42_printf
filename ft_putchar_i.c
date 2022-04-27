@@ -6,12 +6,12 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 16:04:09 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/04/27 15:46:32 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/04/27 17:32:29 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 void	ft_putchar_i(char c, int *i)
 {

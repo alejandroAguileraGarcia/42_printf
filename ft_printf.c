@@ -6,12 +6,12 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 17:05:55 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/04/27 15:52:49 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/04/27 17:32:20 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 void	ft_print_all(const char *str, int *i, va_list args, int j)
 {

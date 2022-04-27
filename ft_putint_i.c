@@ -6,11 +6,11 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 16:16:29 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/04/27 17:03:39 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/04/27 17:32:36 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 void	ft_putint_i(int nb, int *i)
 {
