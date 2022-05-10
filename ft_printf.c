@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 17:05:55 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/05/10 18:42:33 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:56:58 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,6 @@ int	ft_printf(const char *str, ...)
 			ft_putchar_i(str[j], &i);
 		j++;
 	}
+	va_end(args);
 	return (i);
 }
