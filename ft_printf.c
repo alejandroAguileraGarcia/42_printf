@@ -6,12 +6,12 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 17:05:55 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/04/27 17:32:20 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:26:25 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
 #include "libftprintf.h"
+#include <stdarg.h>
 
 void	ft_print_all(const char *str, int *i, va_list args, int j)
 {
@@ -24,16 +24,16 @@ void	ft_print_all(const char *str, int *i, va_list args, int j)
 	else if (str[j + 1] == 'p')
 	{
 		ft_putstr_i("0x", i);
-		ft_puthex_i(va_arg(args, unsigned long long), i);
+		ft_puthex_low(va_arg(args, unsigned long long), i);
 	}
 	else if (str[j + 1] == 'd' || str[j + 1] == 'i')
 		ft_putint_i(va_arg(args, int), i);
 	else if (str[j + 1] == 'u')
 		ft_putui_i(va_arg(args, unsigned int), i);
 	else if (str[j + 1] == 'x')
-		ft_putnbr_base_i(va_arg(args, unsigned int), "0123456789abcdef", i);
+		ft_puthex(va_arg(args, unsigned int), i, "0123456789abcdef");
 	else if (str[j + 1] == 'X')
-		ft_putnbr_base_i(va_arg(args, unsigned int), "0123456789ABCDEF", i);
+		ft_puthex_upp(va_arg(args, unsigned int), i, "0123456789ABCDEF");
 }
 
 int	ft_printf(const char *str, ...)
@@ -49,7 +49,7 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[j] == '%')
 		{
-			ft_print_all (str, &i, args, j);
+			ft_print_all(str, &i, args, j);
 			j++;
 		}
 		else
