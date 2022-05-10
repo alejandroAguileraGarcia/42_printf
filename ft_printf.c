@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 17:05:55 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/05/10 18:26:25 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:42:33 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_print_all(const char *str, int *i, va_list args, int j)
 	else if (str[j + 1] == 'p')
 	{
 		ft_putstr_i("0x", i);
-		ft_puthex_low(va_arg(args, unsigned long long), i);
+		ft_puthex(va_arg(args, unsigned long long), i, "0123456789abcdef");
 	}
 	else if (str[j + 1] == 'd' || str[j + 1] == 'i')
 		ft_putint_i(va_arg(args, int), i);
@@ -33,7 +33,7 @@ void	ft_print_all(const char *str, int *i, va_list args, int j)
 	else if (str[j + 1] == 'x')
 		ft_puthex(va_arg(args, unsigned int), i, "0123456789abcdef");
 	else if (str[j + 1] == 'X')
-		ft_puthex_upp(va_arg(args, unsigned int), i, "0123456789ABCDEF");
+		ft_puthex(va_arg(args, unsigned int), i, "0123456789ABCDEF");
 }
 
 int	ft_printf(const char *str, ...)
